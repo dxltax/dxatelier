@@ -4,31 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dx Portfolio</title>
-  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- Background Video -->
   <video autoplay muted loop id="bg-video">
-    <source src="pinterestdownloader.com-1746535566.154608.mp4" type="video/mp4">
+    <source src="your-video.mp4" type="video/mp4">
     Your browser does not support HTML5 video.
   </video>
 
   <!-- Logo -->
   <div class="logo-container">
-    <img src="IMG_6570.jpeg" alt="Dx Logo" class="logo">
+    <img src="logo.jpeg" alt="Dx Logo" class="logo">
     <h1 class="site-title"><span class="dx">Dx</span> Portfolio</h1>
   </div>
 
-  <!-- Hexagon Navigation -->
-  <div class="hex-container">
-    <a href="profile.html" class="hex hex-center">Profile</a>
-    <a href="booking.html" class="hex hex-top">Booking<br>Online</a>
-    <a href="social.html" class="hex hex-top-right">Social<br>Media</a>
-    <a href="ebook.html" class="hex hex-bottom-right">Ebook</a>
-    <a href="journal.html" class="hex hex-bottom">Journal</a>
-    <a href="community.html" class="hex hex-bottom-left">Community</a>
-    <a href="faq.html" class="hex hex-top-left">FAQ</a>
+  <!-- Hex Layout -->
+  <div class="hex-wrapper">
+    <div class="hex-row top">
+      <a href="faq.html" class="hex">FAQ</a>
+      <a href="booking.html" class="hex">Booking<br>Online</a>
+      <a href="social.html" class="hex">Social<br>Media</a>
+    </div>
+    <div class="hex-row middle">
+      <a href="community.html" class="hex">Community</a>
+      <a href="profile.html" class="hex hex-center">Profile</a>
+      <a href="ebook.html" class="hex">Ebook</a>
+    </div>
+    <div class="hex-row bottom">
+      <div class="spacer"></div>
+      <a href="journal.html" class="hex">Journal</a>
+      <div class="spacer"></div>
+    </div>
   </div>
 
 </body>
