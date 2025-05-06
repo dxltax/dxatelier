@@ -1,42 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dx Portfolio</title>
-  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Background Video -->
   <video autoplay muted loop id="bg-video">
-    <source src="Home bg.mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
+    <source src="home bg.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
   </video>
 
   <!-- Logo -->
   <div class="logo-container">
-    <img src="IMG_6570.jpeg" alt="Dx Logo" class="logo">
-    <h1 class="site-title"><span class="dx">Dx</span> Portfolio</h1>
+    <img src="logo.jpeg" alt="Dx Logo" class="logo" />
   </div>
 
-  <!-- Hex Layout -->
-  <div class="hex-wrapper">
-    <div class="hex-row top">
-      <a href="faq.html" class="hex">FAQ</a>
-      <a href="booking.html" class="hex">Booking<br>Online</a>
-      <a href="social.html" class="hex">Social<br>Media</a>
-    </div>
-    <div class="hex-row middle">
-      <a href="community.html" class="hex">Community</a>
-      <a href="profile.html" class="hex hex-center">Profile</a>
-      <a href="ebook.html" class="hex">Ebook</a>
-    </div>
-    <div class="hex-row bottom">
-      <div class="spacer"></div>
-      <a href="journal.html" class="hex">Journal</a>
-      <div class="spacer"></div>
-    </div>
+  <!-- Main Wrapper -->
+  <div class="main-hex">
+    <a href="profile.html" class="hex center">Profile</a>
+    <a href="logo.html" class="hex top">Logo</a>
+    <a href="booking.html" class="hex top-middle">Booking<br>Online</a>
+    <a href="social.html" class="hex top-right">Social<br>Media</a>
+    <a href="ebook.html" class="hex bottom-right">Ebook</a>
+    <a href="journal.html" class="hex bottom">Journal</a>
+    <a href="community.html" class="hex bottom-left">Community</a>
+    <a href="faq.html" class="hex top-left">FAQ</a>
   </div>
 
 </body>
