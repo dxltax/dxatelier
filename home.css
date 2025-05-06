@@ -21,21 +21,24 @@ body, html {
   z-index: -1;
 }
 
-/* Logo Circle */
-.logo {
+/* Logo center top */
+.logo-center {
   position: absolute;
-  top: 3%;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  color: cyan;
-  border: 2px solid cyan;
-  border-radius: 50%;
-  padding: 10px 14px;
-  font-size: 14px;
-  font-weight: bold;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.3);
 }
+
+.logo-center img {
+  width: 80px;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid cyan;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 6px;
+}
+
 
 /* Tombol container agar selalu center dan proporsional */
 .button-container {
