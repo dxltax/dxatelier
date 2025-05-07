@@ -2,82 +2,69 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Helvetica Neue", sans-serif;
 }
 
-body, html {
-  height: 100%;
-  width: 100%;
+body {
   overflow: hidden;
-  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  color: white;
+  position: relative;
 }
 
-.bg-video {
+#bg-video {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   object-fit: cover;
   z-index: -1;
+  filter: brightness(0.4);
 }
 
-.logo-center {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2; /* Pastikan di atas background video */
+.logo-container {
+  text-align: center;
+  margin-top: 40px;
 }
-.logo-center img {
+
+.logo {
   width: 80px;
   height: auto;
-  border-radius: 50%;
-  border: 2px solid cyan;
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 4px;
 }
 
+.logotext {
+  font-size: 1.5rem;
+  color: white;
+}
 
-/* Tombol container agar selalu center dan proporsional */
+.logotext span {
+  color: cyan;
+}
+
 .button-container {
-  position: absolute;
-  top: 15vh;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90vw;
-  max-width: 400px;
-  display: grid;
-  grid-template-areas:
-    "faq       booking     social"
-    "community profile     ebook"
-    ".         journal     .";
-  gap: 2vh;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  gap: 20px;
 }
 
-/* Tombol umum */
-.button {
-  background: linear-gradient(135deg, #00f0ff, #00cfff);
-  color: black;
-  padding: 12px 18px;
-  border-radius: 15px;
-  font-weight: bold;
-  text-align: center;
+.menu-button {
+  background: linear-gradient(to right, #00e0ff, #00bcd4);
+  color: white;
   text-decoration: none;
-  box-shadow: 0 0 12px #00f0ff;
-  min-width: 90px;
-  transition: 0.2s ease;
+  padding: 15px 30px;
+  border-radius: 16px;
+  font-size: 1rem;
+  width: 80%;
+  max-width: 320px;
+  text-align: center;
+  transition: transform 0.2s ease, background 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
 }
 
-/* Khusus tombol utama (Profile di tengah) */
-.button.main {
-  grid-area: profile;
+.menu-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #00bcd4, #00e0ff);
 }
-
-/* Posisi grid manual */
-.button:nth-child(1) { grid-area: faq; }
-.button:nth-child(2) { grid-area: booking; }
-.button:nth-child(3) { grid-area: social; }
-.button:nth-child(4) { grid-area: community; }
-.button:nth-child(6) { grid-area: ebook; }
-.button:nth-child(7) { grid-area: journal; }
