@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog — dxfolio</title>
+  <link rel="stylesheet" href="blog.css" />
+</head>
+<body>
+  <header>
+    <img src="your-logo-image.jpeg" alt="dxfolio logo" class="logo" />
+    <h1 class="logo-text">dxfolio</h1>
+  </header>
+
+  <section class="intro">
+    <h2>My Personal Blog</h2>
+    <p>Dive into my mind — thoughts, tips, opinions, and more.</p>
+  </section>
+
+  <div class="filter-buttons">
+    <button onclick="filterPosts('all')">All</button>
+    <button onclick="filterPosts('tips')">Tips</button>
+    <button onclick="filterPosts('opinions')">Opinions</button>
+    <button onclick="filterPosts('personal')">Personal</button>
+    <button onclick="filterPosts('insight')">Insight</button>
+  </div>
+
+  <main class="posts-container">
+
+    <!-- TIPS -->
+    <article class="blog-post tips">
+      <h3>5 Frontend Hacks You’ll Wish You Knew Sooner</h3>
+      <p class="meta">Category: Tips | Date: May 2025</p>
+      <p>Discover some quick and effective frontend techniques that can speed up your development flow without sacrificing code quality.</p>
+    </article>
+
+    <article class="blog-post tips">
+      <h3>Tailwind Shortcuts for Lazy Devs (Like Me)</h3>
+      <p class="meta">Category: Tips | Date: May 2025</p>
+      <p>A few handy utility-first CSS tricks using Tailwind that make your layout work ten times faster.</p>
+    </article>
+
+    <!-- OPINI -->
+    <article class="blog-post opinions">
+      <h3>Why Dark Mode Isn’t Just A Trend</h3>
+      <p class="meta">Category: Opini | Date: May 2025</p>
+      <p>Dark mode is more than just a visual preference — it’s a necessity for accessibility, focus, and late-night productivity.</p>
+    </article>
+
+    <article class="blog-post opinions">
+      <h3>The Truth About Coding Bootcamps</h3>
+      <p class="meta">Category: Opini | Date: May 2025</p>
+      <p>Are bootcamps worth it? My honest take as a self-taught frontend dev navigating the tech space.</p>
+    </article>
+
+    <!-- CURHAT -->
+    <article class="blog-post personal">
+      <h3>That One Time I Pushed to Main on Accident</h3>
+      <p class="meta">Category: Curhat | Date: May 2025</p>
+      <p>The day I almost broke production... and what it taught me about testing, teammates, and humility.</p>
+    </article>
+
+    <article class="blog-post personal">
+      <h3>I Cried Over a Broken Build</h3>
+      <p class="meta">Category: Curhat | Date: May 2025</p>
+      <p>Behind the screen, there’s a real human. This is my honest story about burnout and bouncing back.</p>
+    </article>
+
+    <!-- INFO -->
+    <article class="blog-post insight">
+      <h3>Top 3 Free Hosting Services for Portfolio Sites</h3>
+      <p class="meta">Category: Info | Date: May 2025</p>
+      <p>Want to host your personal site without breaking the bank? These are the best free options in 2025.</p>
+    </article>
+
+    <article class="blog-post insight">
+      <h3>What’s New in React 19?</h3>
+      <p class="meta">Category: Info | Date: May 2025</p>
+      <p>Hooks are evolving, Suspense is getting serious — here’s what you need to know about the next big thing in React.</p>
+    </article>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 dxfolio. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function filterPosts(category) {
+      const posts = document.querySelectorAll('.blog-post');
+      posts.forEach(post => {
+        post.style.display = (category === 'all' || post.classList.contains(category)) ? 'block' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
