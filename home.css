@@ -6,7 +6,7 @@
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   min-height: 100vh;
   color: white;
   position: relative;
