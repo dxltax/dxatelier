@@ -8,26 +8,23 @@ body {
 }
 
 .logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 30px;
+  text-align: center;
+  margin-top: 40px;
 }
 
 .logo {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
 }
 
 .logotext {
-  font-size: 22px;
-  font-weight: 600;
-  color: #00ffff;
+  font-size: 1.8rem;
+  color: white;
+  margin-top: 10px;
 }
 
 .logotext span {
-  color: #ffffff;
+  color: cyan;
 }
 
 .content h2 {
