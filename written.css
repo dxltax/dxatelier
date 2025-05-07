@@ -1,12 +1,14 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #0f1c2e, #122b45);
+  padding: 0;
+  background: linear-gradient(135deg, #081b29, #0f2c4f);
+  font-family: 'Poppins', sans-serif;
   color: #ffffff;
-  text-align: center;
-  padding: 40px 20px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 .logo-container {
   text-align: center;
   margin-top: 40px;
@@ -27,31 +29,56 @@ body {
   color: cyan;
 }
 
-.content h2 {
-  font-size: 30px;
-  margin-bottom: 15px;
-  color: #00e0ff;
+.container {
+  animation: fadeIn 1s ease-in;
 }
 
-.message, .status, .tease {
+.card {
+  background: rgba(0, 255, 255, 0.08);
+  border: 1px solid #00eaff;
+  border-radius: 12px;
+  padding: 40px 30px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.card h1 {
+  font-size: 32px;
+  color: #00f0ff;
+  margin-bottom: 15px;
+}
+
+.card .teaser, .card .info, .card .note {
+  margin: 10px 0;
   font-size: 16px;
   line-height: 1.6;
-  max-width: 600px;
-  margin: 10px auto;
 }
 
-.back-btn {
-  margin-top: 30px;
-  padding: 10px 20px;
-  background-color: #00c3ff;
-  border: none;
-  color: white;
+.card button {
+  margin-top: 25px;
+  padding: 10px 22px;
   font-size: 16px;
-  border-radius: 6px;
+  color: #fff;
+  background: linear-gradient(to right, #00f0ff, #00aaff);
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s ease;
 }
 
-.back-btn:hover {
-  background-color: #009ecc;
+.card button:hover {
+  background: linear-gradient(to right, #00aaff, #00f0ff);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
