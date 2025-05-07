@@ -1,0 +1,90 @@
+body {
+  background-color: #081b29;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  color: white;
+  margin-top: 10px;
+}
+.logotext span {
+  color: cyan;
+}
+
+.intro {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.filter-buttons {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.filter-buttons button {
+  background-color: transparent;
+  border: 2px solid #00f0ff;
+  color: #00f0ff;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.filter-buttons button:hover {
+  background-color: #00f0ff;
+  color: #081b29;
+}
+
+.posts-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.blog-post {
+  background-color: #0f2b3a;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 240, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.blog-post:hover {
+  transform: translateY(-5px);
+}
+
+.blog-post h3 {
+  color: #00f0ff;
+  margin-top: 0;
+}
+
+.meta {
+  font-size: 13px;
+  color: #b0faff;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  font-size: 13px;
+  padding: 20px;
+  color: #666;
+}
