@@ -78,62 +78,43 @@ body {
   z-index: 1;
 }
 
-.bubble {
-  position: absolute;
-  bottom: -50px;
-  width: 20px;
-  height: 20px;
-  background: radial-gradient(circle, cyan, transparent);
+.profile-card {
+  background-color: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px 20px;
+  margin: 40px auto;
+  max-width: 380px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 30px rgba(0, 255, 255, 0.15);
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  animation: floatUp 8s infinite ease-in;
-  opacity: 0.5;
+  object-fit: cover;
+  border: 3px solid cyan;
+  margin-bottom: 15px;
 }
 
-.bubble:nth-child(1) {
-  left: 10%;
-  animation-delay: 0s;
-  width: 15px;
-  height: 15px;
+.profile-title {
+  font-size: 1rem;
+  color: #00e0ff;
+  margin-bottom: 10px;
 }
 
-.bubble:nth-child(2) {
-  left: 30%;
-  animation-delay: 2s;
-  width: 25px;
-  height: 25px;
+.bio {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding: 0 10px;
 }
 
-.bubble:nth-child(3) {
-  left: 50%;
-  animation-delay: 4s;
-  width: 20px;
-  height: 20px;
-}
-
-.bubble:nth-child(4) {
-  left: 70%;
-  animation-delay: 1s;
-  width: 18px;
-  height: 18px;
-}
-
-.bubble:nth-child(5) {
-  left: 90%;
-  animation-delay: 3s;
-  width: 22px;
-  height: 22px;
-}
-
-@keyframes floatUp {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 0.5;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-120px) scale(0.7);
-    opacity: 0;
-  }
+.bio code {
+  background-color: rgba(0, 255, 255, 0.15);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-family: "Courier New", monospace;
+  font-size: 0.9em;
 }
