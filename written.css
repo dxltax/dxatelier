@@ -1,13 +1,10 @@
 body {
   margin: 0;
-  padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(145deg, #0a0f1a, #0e1624);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
+  background: linear-gradient(to right, #0f1c2e, #122b45);
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px;
 }
 
 .logo-container {
