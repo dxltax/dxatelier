@@ -88,3 +88,22 @@ footer {
   padding: 20px;
   color: #666;
 }
+
+.post-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+  color: white;
+}
+
+.category {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 2rem;
+  color: cyan;
+  text-decoration: none;
+}
