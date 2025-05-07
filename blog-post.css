@@ -9,7 +9,6 @@ body {
 }
 
 .blog-header {
-  display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 2rem;
@@ -21,9 +20,12 @@ body {
 }
 
 .logo-text {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #00eaff;
+  font-size: 1.8rem;
+  color: #white;
+  margin-top: 10px;
+}
+.logotext span {
+  color: cyan;
 }
 
 .post-container {
