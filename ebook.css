@@ -1,0 +1,98 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #0a0f1c;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+/* Logo section */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.logotext {
+  font-size: 1.5rem;
+  color: #00e0ff;
+  font-weight: bold;
+  text-align: center;
+}
+
+.logotext span {
+  color: #ffffff;
+  font-weight: normal;
+}
+
+/* Main wrapper */
+.ebook-wrapper {
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+.ebook-wrapper h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #00e0ff;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+/* Genre buttons */
+.genre-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background: linear-gradient(to right, #00e0ff, #007aff);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  min-width: 140px;
+  text-align: center;
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #007aff, #00e0ff);
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 2px solid #00e0ff;
+  color: #00e0ff;
+}
+
+.btn.secondary:hover {
+  background: #00e0ff;
+  color: #000;
+}
