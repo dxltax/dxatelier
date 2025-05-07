@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(145deg, #0a0f1a, #0e1624);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  min-height: 100vh;
+}
+
+.logo-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+}
+
+.logotext {
+  font-size: 1.8rem;
+  color: white;
+  margin-top: 10px;
+}
+
+.logotext span {
+  color: cyan;
+}
+
+.profile-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px 25px;
+  margin-top: 30px;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid cyan;
+  margin-bottom: 15px;
+}
+
+.profile-title {
+  font-size: 1rem;
+  color: #00e0ff;
+  margin-bottom: 10px;
+}
+
+.bio {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding: 0 10px;
+}
+
+.bio code {
+  background-color: rgba(0, 255, 255, 0.15);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-family: "Courier New", monospace;
+  font-size: 0.9em;
+}
