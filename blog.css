@@ -1,14 +1,17 @@
 body {
-  background-color: #081b29;
-  color: #fff;
-  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0c0f19;
+  color: #fff;
+  line-height: 1.7;
+  padding: 0 1rem;
 }
 
 header {
-  text-align: center;
-  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
 }
 
 .logo {
@@ -25,85 +28,59 @@ header {
   color: cyan;
 }
 
-.intro {
-  text-align: center;
-  padding: 10px 20px;
-}
-
 .filter-buttons {
   text-align: center;
   margin: 20px 0;
 }
 
 .filter-buttons button {
-  background-color: transparent;
-  border: 2px solid #00f0ff;
-  color: #00f0ff;
+  background: #00e1ff;
+  color: #000;
+  border: none;
   padding: 8px 16px;
-  margin: 5px;
-  border-radius: 20px;
+  margin: 0 5px;
+  border-radius: 6px;
+  font-weight: bold;
   cursor: pointer;
-  font-size: 14px;
-  transition: all 0.3s ease;
+  transition: background 0.3s;
 }
 
 .filter-buttons button:hover {
-  background-color: #00f0ff;
-  color: #081b29;
+  background: #00b8d4;
 }
 
-.posts-container {
+main {
   max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+  margin: auto;
 }
 
 .blog-post {
-  background-color: #0f2b3a;
+  background: #121826;
   padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 240, 255, 0.2);
-  transition: transform 0.3s ease;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 225, 255, 0.1);
 }
 
-.blog-post:hover {
-  transform: translateY(-5px);
-}
-
-.blog-post h3 {
-  color: #00f0ff;
+.blog-post h2 {
   margin-top: 0;
+  color: #00e1ff;
 }
 
 .meta {
-  font-size: 13px;
-  color: #b0faff;
-  margin-bottom: 10px;
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-bottom: 15px;
 }
 
-footer {
-  text-align: center;
-  font-size: 13px;
-  padding: 20px;
-  color: #666;
+.content p, .content ul {
+  margin-bottom: 15px;
 }
 
-.post-container {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 1rem;
-  color: white;
+.content ul {
+  padding-left: 1.2rem;
 }
 
-.category {
-  font-style: italic;
-  margin-bottom: 1rem;
-}
-
-.back-button {
-  display: inline-block;
-  margin-top: 2rem;
-  color: cyan;
-  text-decoration: none;
+.content li {
+  list-style-type: disc;
 }
