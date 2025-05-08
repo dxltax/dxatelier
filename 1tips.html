@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5 Frontend Hacks You’ll Wish You Knew Sooner</title>
+  <link rel="stylesheet" href="blog-post.css" />
+</head>
+<body>
+  <header class="blog-header">
+    <img src="IMG_6570.jpeg" alt="Dxfolio Logo" class="logo" />
+    <h1 class="logo-text"><span>Portfolio</span></h1>
+  </header>
+
+  <main class="post-container">
+    <h2>5 Frontend Hacks You’ll Wish You Knew Sooner</h2>
+    <p class="meta">Category: Tips | Date: May 2025</p>
+
+    <p>If you're a frontend developer looking for shortcuts that don’t compromise code quality, these five tips might just change the way you code forever.</p>
+
+    <h3>1. Use CSS Variables for Color Themes</h3>
+    <p>Instead of hardcoding colors everywhere, declare variables in `:root` and reuse them. This allows you to implement dark mode or theme switching effortlessly.</p>
+
+    <pre><code>:root {
+  --primary: #00bcd4;
+  --background: #f5f5f5;
+}
+body {
+  background-color: var(--background);
+  color: var(--primary);
+}</code></pre>
+
+    <h3>2. Leverage the Power of `em` & `rem`</h3>
+    <p>Stop fighting with fixed pixel units. Use relative units like `em` and `rem` for truly responsive typography and spacing that scales smoothly across devices.</p>
+
+    <h3>3. Use `scroll-snap` for Smooth Scrolling UI</h3>
+    <p>Create carousel or section-based websites effortlessly with CSS scroll snap — no JS required!</p>
+
+    <pre><code>.container {
+  scroll-snap-type: x mandatory;
+}
+.item {
+  scroll-snap-align: start;
+}</code></pre>
+
+    <h3>4. `content-visibility: auto` = Faster Rendering</h3>
+    <p>This property tells the browser not to render content until it’s visible, improving performance in large DOM-heavy apps.</p>
+
+    <h3>5. Use the `:has()` Pseudo-Class (If Supported)</h3>
+    <p>It's like giving CSS a parent selector. You can now write styles like "if this element contains that, do this."</p>
+
+    <pre><code>article:has(img) {
+  padding-bottom: 1rem;
+}</code></pre>
+
+    <p>These hacks aren’t just cool—they’re practical. Try one or all five in your next project and watch your productivity level up.</p>
+
+    <p class="closing">Happy coding, fellow frontend wizard!</p>
+
+    <a href="blog.html" class="back-button">← Back to Blog</a>
+  </main>
+</body>
+</html>
