@@ -19,15 +19,6 @@ header {
   height: 60px;
 }
 
-.logo-text {
-  font-size: 1.8rem;
-  color: white;
-  margin-top: 10px;
-}
-.logotext span {
-  color: cyan;
-}
-
 .filter-buttons {
   text-align: center;
   margin: 20px 0;
