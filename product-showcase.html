@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shoe Showcase | dxfolio</title>
+  <link rel="stylesheet" href="product-showcase.css" />
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="dxfolio Logo" class="logo" />
+    <h1 class="logo-text">dxfolio</h1>
+  </header>
+
+  <main class="showcase-container">
+    <div class="product-viewer">
+      <img src="shoe-red.png" alt="Shoe" id="productImage" />
+      <div class="color-options">
+        <button class="color-btn red" onclick="changeColor('red')"></button>
+        <button class="color-btn blue" onclick="changeColor('blue')"></button>
+        <button class="color-btn black" onclick="changeColor('black')"></button>
+      </div>
+    </div>
+
+    <div class="product-details">
+      <h2>Air Glide X</h2>
+      <p>Lightweight. Responsive. Built for speed and comfort.</p>
+
+      <ul class="features">
+        <li onclick="highlightFeature(this)">Breathable Mesh Upper</li>
+        <li onclick="highlightFeature(this)">Shock-Absorbing Sole</li>
+        <li onclick="highlightFeature(this)">360° Flex Technology</li>
+      </ul>
+
+      <button class="btn-order">Order Now</button>
+    </div>
+  </main>
+
+  <script>
+    function changeColor(color) {
+      document.getElementById("productImage").src = `shoe-${color}.png`;
+    }
+
+    function highlightFeature(element) {
+      document.querySelectorAll(".features li").forEach(li => li.classList.remove("active"));
+      element.classList.add("active");
+    }
+  </script>
+</body>
+</html>
