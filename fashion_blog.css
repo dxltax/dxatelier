@@ -1,0 +1,7 @@
+body { margin: 0; font-family: 'Helvetica Neue', sans-serif; background: #fff0f5; color: #333; }
+header { background: #fff; padding: 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+nav a { margin: 0 10px; text-decoration: none; color: #555; font-weight: bold; }
+.hero { text-align: center; padding: 100px 20px; background: url('https://source.unsplash.com/featured/?fashion') center/cover no-repeat; color: white; }
+.hero h2 { font-size: 48px; margin-bottom: 10px; }
+.hero p { font-size: 20px; }
+button { background: #e75480; border: none; padding: 10px 20px; color: white; border-radius: 5px; font-size: 16px; cursor: pointer; }
