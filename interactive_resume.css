@@ -1,0 +1,44 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f7fb;
+  color: #333;
+}
+header {
+  text-align: center;
+  background: #00bcd4;
+  color: white;
+  padding: 2rem 1rem;
+}
+.skills, .experience {
+  padding: 1.5rem;
+  max-width: 800px;
+  margin: auto;
+}
+ul { list-style: none; padding: 0; }
+li, .event {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 6px;
+  position: relative;
+}
+li:hover::after, .event:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translate(10px, -50%);
+  background: #333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 1rem;
+  color: #666;
+}
