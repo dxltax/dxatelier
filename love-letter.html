@@ -14,64 +14,85 @@
     }
 
     .container {
-      max-width: 700px;
+      max-width: 720px;
       margin: 10% auto 0;
       text-align: center;
       padding: 40px;
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 16px;
-      box-shadow: 0 0 20px rgba(255, 192, 203, 0.15);
+      box-shadow: 0 0 30px rgba(255, 192, 203, 0.15);
       position: relative;
       z-index: 2;
     }
 
     h1 {
-      font-size: 2.5em;
+      font-size: 2.7em;
       color: #ffdce0;
       margin-bottom: 20px;
     }
 
-    .hidden-text {
-      opacity: 0;
-      max-height: 0;
-      overflow: hidden;
-      transition: all 1s ease;
-      font-size: 1.2em;
-      line-height: 1.8;
-      color: #f3f3f3;
+    .letter-text {
+      font-size: 1.15em;
+      line-height: 1.9;
+      color: #f8f8f8;
+      margin-bottom: 30px;
+      white-space: pre-line;
     }
 
-    .hidden-text.revealed {
-      opacity: 1;
-      max-height: 500px;
+    .question {
+      margin-top: 30px;
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #ffc1cc;
     }
 
-    .reveal-btn {
+    .buttons {
       margin-top: 20px;
-      background: #ffdce0;
-      color: #2b223a;
-      padding: 10px 20px;
+    }
+
+    .btn {
+      margin: 0 10px;
+      padding: 12px 24px;
       font-size: 1em;
       border: none;
       border-radius: 8px;
       cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn-yes {
+      background-color: #ffb6c1;
+      color: #2b223a;
+    }
+
+    .btn-yes:hover {
+      background-color: #ff99aa;
+    }
+
+    .btn-no {
+      background-color: transparent;
+      color: #ffdce0;
+      border: 1px solid #ffdce0;
+    }
+
+    .btn-no:hover {
+      background-color: #2b223a;
     }
 
     .signature {
-      margin-top: 30px;
+      margin-top: 35px;
       font-style: italic;
       color: #fbc4c4;
     }
 
-    .back-btn, .send-btn {
-      margin-top: 20px;
+    .back-btn {
+      margin-top: 30px;
+      display: block;
       font-size: 14px;
       color: #ffdce0;
       text-decoration: underline;
       cursor: pointer;
-      display: inline-block;
-      margin-right: 15px;
     }
 
     canvas {
@@ -92,24 +113,36 @@
 <canvas id="particles"></canvas>
 
 <div class="container">
-  <h1>To the One I Admire</h1>
+  <h1>For Someone Special</h1>
 
-  <p>There's something I've been meaning to say...</p>
+  <div class="letter-text">
+    Sometimes I wonder how to say this without making it weird, or awkward, or too much. <br><br>
 
-  <div class="hidden-text" id="letterText">
-    Sometimes, words feel too small to hold what I feel.<br><br>
-    But if this page could speak, it would whisper everything my heart wants to say.<br>
-    I admire you—not just for what you do, but for who you are.<br><br>
-    You inspire me, ground me, and unknowingly become the highlight of my thoughts.<br>
-    I don’t expect anything in return—this is just something I had to let out.<br>
+    But then I realize — honesty deserves its moment. <br>
+    So here it is... <br><br>
+
+    You’ve become someone who appears in my thoughts without warning. <br>
+    Your smile, your kindness, your existence — they’re unforgettable. <br><br>
+
+    I admire you deeply. I value who you are, not just how you make me feel. <br><br>
+
+    Maybe this is reckless, maybe it’s brave. But I just couldn’t hold it anymore. <br>
+    I wanted you to know that you matter to me — more than just a friend. <br><br>
+
+    So... I’m taking a chance now. <br>
   </div>
 
-  <button class="reveal-btn" onclick="revealText()">Read More</button>
+  <div class="question">
+    Would you like to be my partner?
+  </div>
+
+  <div class="buttons">
+    <button class="btn btn-yes" onclick="answerYes()">Yes ❤️</button>
+    <button class="btn btn-no" onclick="answerNo()">No 🙁</button>
+  </div>
 
   <div class="signature">— Someone Who Cares</div>
-
   <div class="back-btn" onclick="window.history.back()">← Back to Portfolio</div>
-  <div class="send-btn" onclick="sendMessage()">💌 Send This</div>
 </div>
 
 <audio autoplay loop>
@@ -117,16 +150,16 @@
 </audio>
 
 <script>
-  function revealText() {
-    document.getElementById('letterText').classList.add('revealed');
+  function answerYes() {
+    alert("You just made someone's heart very happy. ❤️");
+    window.location.href = "https://wa.me/?text=I%20read%20your%20letter...%20and%20Yes%2C%20I%20want%20to%20be%20with%20you.%20%F0%9F%92%8D";
   }
 
-  function sendMessage() {
-    const text = encodeURIComponent(`I found this page and thought of you.\n\n"Sometimes, words feel too small to hold what I feel..." 💌\n\n— Someone Who Cares`);
-    window.open(`https://wa.me/?text=${text}`, '_blank');
+  function answerNo() {
+    alert("That's okay. Thank you for reading this far. 🙂");
   }
 
-  // Partikel romantis
+  // Partikel efek romantis
   const canvas = document.getElementById('particles');
   const ctx = canvas.getContext('2d');
   let width, height, particles;
