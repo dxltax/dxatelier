@@ -19,9 +19,10 @@
     }
 
     h1 {
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       font-weight: 400;
       color: #00ffff;
+      text-shadow: 0 0 10px #00ffff;
     }
 
     .orb {
@@ -29,15 +30,23 @@
       height: 150px;
       background: radial-gradient(circle at center, #111 40%, #000 100%);
       border-radius: 50%;
-      box-shadow: inset 0 0 30px rgba(0, 255, 255, 0.1);
       position: relative;
       cursor: pointer;
+      box-shadow:
+        0 0 20px #00ffff,
+        0 0 40px #00ffff88,
+        0 0 60px #00ffff44,
+        inset 0 0 30px #001111;
       transition: all 0.3s ease-in-out;
     }
 
     .orb.active {
       background: radial-gradient(circle at center, #00ffff 0%, #004c4c 100%);
-      box-shadow: 0 0 40px rgba(0, 255, 255, 0.7), inset 0 0 20px rgba(0, 255, 255, 0.5);
+      box-shadow:
+        0 0 25px #ff00ff,
+        0 0 60px #00ffff,
+        0 0 80px #ff00ff88,
+        inset 0 0 30px #00ffff;
     }
 
     .sparkle {
@@ -46,24 +55,25 @@
       height: 100%;
       border-radius: 50%;
       pointer-events: none;
-      background: radial-gradient(circle, rgba(255,255,255,0.6) 10%, transparent 70%);
       opacity: 0;
       animation: none;
     }
 
     .orb.active .sparkle {
-      opacity: 1;
       animation: sparkleAnim 1.2s ease-out forwards;
     }
 
     @keyframes sparkleAnim {
       0% {
+        background: radial-gradient(circle, #ff00ff 10%, transparent 70%);
         transform: scale(0.6);
         opacity: 1;
       }
-      70% {
-        transform: scale(1.4);
-        opacity: 0.6;
+      30% {
+        background: radial-gradient(circle, #00ffff 10%, transparent 70%);
+      }
+      60% {
+        background: radial-gradient(circle, #ffea00 10%, transparent 70%);
       }
       100% {
         transform: scale(2);
@@ -78,6 +88,28 @@
       cursor: pointer;
       font-size: 14px;
     }
+
+    /* Optional subtle animation to make the orb pulse */
+    .orb::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      box-shadow: 0 0 20px #00ffffaa;
+      animation: pulse 2s infinite alternate;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 0.4;
+      }
+      100% {
+        transform: scale(1.05);
+        opacity: 0.8;
+      }
+    }
   </style>
 </head>
 <body>
@@ -88,12 +120,15 @@
   <div class="back-btn" onclick="window.history.back()">← Back to Portfolio</div>
 
   <script>
-    function activateOrb(element) {
-      element.classList.add('active');
+    function activateOrb(orbElement) {
+      orbElement.classList.add('active');
+      const sparkle = orbElement.querySelector('.sparkle');
+      sparkle.style.opacity = 1;
       setTimeout(() => {
-        element.classList.remove('active');
-      }, 1500);
+        orbElement.classList.remove('active');
+        sparkle.style.opacity=0;
+      }, 1200);
     }
-  </script>
+</script>
 </body>
 </html>
