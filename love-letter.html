@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Love Letter</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #1e1e2f, #2b223a);
+      font-family: 'Georgia', serif;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 10% auto 0;
+      text-align: center;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(255, 192, 203, 0.15);
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #ffdce0;
+      margin-bottom: 20px;
+    }
+
+    .hidden-text {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 1s ease;
+      font-size: 1.2em;
+      line-height: 1.8;
+      color: #f3f3f3;
+    }
+
+    .hidden-text.revealed {
+      opacity: 1;
+      max-height: 500px;
+    }
+
+    .reveal-btn {
+      margin-top: 20px;
+      background: #ffdce0;
+      color: #2b223a;
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .signature {
+      margin-top: 30px;
+      font-style: italic;
+      color: #fbc4c4;
+    }
+
+    .back-btn, .send-btn {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #ffdce0;
+      text-decoration: underline;
+      cursor: pointer;
+      display: inline-block;
+      margin-right: 15px;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="particles"></canvas>
+
+<div class="container">
+  <h1>To the One I Admire</h1>
+
+  <p>There's something I've been meaning to say...</p>
+
+  <div class="hidden-text" id="letterText">
+    Sometimes, words feel too small to hold what I feel.<br><br>
+    But if this page could speak, it would whisper everything my heart wants to say.<br>
+    I admire you—not just for what you do, but for who you are.<br><br>
+    You inspire me, ground me, and unknowingly become the highlight of my thoughts.<br>
+    I don’t expect anything in return—this is just something I had to let out.<br>
+  </div>
+
+  <button class="reveal-btn" onclick="revealText()">Read More</button>
+
+  <div class="signature">— Someone Who Cares</div>
+
+  <div class="back-btn" onclick="window.history.back()">← Back to Portfolio</div>
+  <div class="send-btn" onclick="sendMessage()">💌 Send This</div>
+</div>
+
+<audio autoplay loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/08/31/audio_57c8b1f2b1.mp3?filename=romantic-calm-piano-ambient-117539.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  function revealText() {
+    document.getElementById('letterText').classList.add('revealed');
+  }
+
+  function sendMessage() {
+    const text = encodeURIComponent(`I found this page and thought of you.\n\n"Sometimes, words feel too small to hold what I feel..." 💌\n\n— Someone Who Cares`);
+    window.open(`https://wa.me/?text=${text}`, '_blank');
+  }
+
+  // Partikel romantis
+  const canvas = document.getElementById('particles');
+  const ctx = canvas.getContext('2d');
+  let width, height, particles;
+
+  function resize() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+    init();
+  }
+
+  function init() {
+    particles = [];
+    for (let i = 0; i < 100; i++) {
+      particles.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        radius: Math.random() * 2 + 1,
+        speedX: Math.random() * 0.5 - 0.25,
+        speedY: Math.random() * 0.5 - 0.25,
+        opacity: Math.random() * 0.3 + 0.1
+      });
+    }
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, width, height);
+    for (let p of particles) {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255, 192, 203, ${p.opacity})`;
+      ctx.fill();
+
+      p.x += p.speedX;
+      p.y += p.speedY;
+
+      if (p.x < 0 || p.x > width || p.y < 0 || p.y > height) {
+        p.x = Math.random() * width;
+        p.y = Math.random() * height;
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+
+  window.addEventListener('resize', resize);
+  resize();
+  draw();
+</script>
+
+</body>
+</html>
